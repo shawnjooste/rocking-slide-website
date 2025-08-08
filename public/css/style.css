@@ -572,23 +572,25 @@ header .mobile-menu {
 
 .home > div > div .intro {
   position: absolute;
-  height: 170px;
-  width: 200px;
-  padding: 0;
+  height: auto;
+  width: 300px;
+  padding: 20px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 50%;
-  left: 620px;
-  top: 0px;
-  color: #fff;
-  font-size: 18px;
-  flex-direction: column;
-  line-height: 30px;
-  margin: 0;
+  align-items: flex-start;
+  justify-content: flex-start;
   text-align: left;
+  border-radius: 0;
+  left: 650px;
+  top: 120px;
+  color: #fff;
+  font-size: 16px;
+  flex-direction: column;
+  line-height: 24px;
+  margin: 0;
   font-weight: normal;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .home .cta {
@@ -2391,8 +2393,18 @@ header .mobile-menu {
   }
 
   .home > div > div .intro {
-    line-height: 36px;
+    line-height: 28px;
     margin: 15px 0 25px;
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
   }
 
   .home > div {
