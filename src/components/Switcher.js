@@ -11,7 +11,7 @@ const colors = [
   { id: 8, name: "goldenrod" },
 ];
 const Switcher = () => {
-  const [color, setColor] = useState("yellow");
+  const [color, setColor] = useState("red");
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -22,7 +22,7 @@ const Switcher = () => {
       <div
         id="switcher"
         className={toggle ? "open" : "close"}
-        style={{ display: "block" }}
+        style={{ display: "none" }}
       >
         <div className="content-switcher">
           <h4>COLOR SWITCHER</h4>
@@ -53,6 +53,7 @@ const Switcher = () => {
         id="showSwitcher"
         className={`styleSecondColor ${toggle ? "close" : "open"}`}
         onClick={() => setToggle(true)}
+        style={{ display: "none" }}
       >
         <i className="fa fa-cog" />
       </div>
