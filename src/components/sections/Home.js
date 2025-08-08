@@ -10,13 +10,13 @@ const Home = () => {
               </span>
             </span>
             <span className="position-relative">
-              <span className="animated-layer">I am</span>
+              <span className="animated-layer">we are</span>
               <span className="intro animated-layer">
-                Front-end Developer with 7 years experience based in London
+                Creative team with innovative solutions and cutting-edge technology
               </span>
             </span>
             <span>
-              <span className="animated-layer">Steven</span>
+              <span className="animated-layer">Rocking</span>
             </span>
           </h1>
         </div>
