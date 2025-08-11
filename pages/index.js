@@ -10,12 +10,20 @@ import Home from "@/src/components/sections/Home";
 import Portfolio from "@/src/components/sections/Portfolio";
 import Testimonials from "@/src/components/sections/Testimonials";
 import Separator from "@/src/components/Separator";
-import { jqueryFuntion } from "@/src/utilits";
+import { initJqueryFuntion, initCustomScrollbar } from "@/src/utilits";
 import { Fragment, useEffect } from "react";
 const Index = () => {
   useEffect(() => {
-    jqueryFuntion();
+    // Initialize jQuery functions synchronously
+    initJqueryFuntion();
+    
+    // Initialize custom scrollbar after a short delay to ensure DOM is ready
+    const timer = setTimeout(() => {
+      initCustomScrollbar();
+    }, 100);
+
     return () => {
+      clearTimeout(timer);
       if (window.$ && window.$('#wrapper').hasClass('mCustomScrollbar')) {
         window.$('#wrapper').mCustomScrollbar('destroy');
       }
