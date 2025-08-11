@@ -15,7 +15,12 @@ import { Fragment, useEffect } from "react";
 const Index = () => {
   useEffect(() => {
     jqueryFuntion();
-  });
+    return () => {
+      if (window.$ && window.$('#wrapper').hasClass('mCustomScrollbar')) {
+        window.$('#wrapper').mCustomScrollbar('destroy');
+      }
+    };
+  }, []);
 
   return (
     <Fragment>
